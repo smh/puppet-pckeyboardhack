@@ -3,7 +3,6 @@
 # Usage:
 #
 #   include pckeyboardhack
-
 class pckeyboardhack {
   package { 'PCKeyboardHack':
     ensure   => installed,
