@@ -3,18 +3,13 @@
 # Parameters:
 #
 #  mappings - a hash of mappings to set up. For instance: { 'control_l' => 80 }
-#  user - the user to run as - defaults to $::boxen_user
-define pckeyboardhack::bind(
-  $mappings,
-  $user = $::boxen_user
-) {
+define pckeyboardhack::bind($mappings) {
 
-  boxen::osx_defaults { 'pckeyboardhack::bind':
-    ensure => 'present',
-    domain => 'org.pqrs.PCKeyboardHack',
-    key    => 'sysctl',
-    type   => 'dict',
-    value  => inline_template('<%= mappings.keys.map { |k| "enable_#{k} 1 keycode_#{k} #{mappings[k]}" }.join(" ") %>'),
-    user   => $user
+  property_list_key { 'pckeyboardhack::bind':
+    ensure     => 'present',
+    path       => '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+    key        => 'sysctl',
+    value      => expand_binding($mappings),
+    value_type => 'hash'
   }
 }

@@ -8,11 +8,17 @@ Installs [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack
 
 ```puppet
 include pckeyboardhack
+
+# change the left control to F19:
+pckeyboardhack::bind { 'keyboard bindings':
+  mappings => { 'control_l' => 80 }
+}
 ```
 
 ## Required Puppet Modules
 
 * `boxen`
+* `glarizza/puppet-property_list_key`
 
 ## Development
 
