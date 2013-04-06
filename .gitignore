@@ -4,5 +4,6 @@
 /spec/fixtures/.tmp
 /spec/fixtures/Puppetfile.lock
 /spec/fixtures/modules/boxen/
-/spec/fixtures/modules/property_list_key
+/spec/fixtures/modules/osx/
+/spec/fixtures/modules/property_list_key/
 /spec/fixtures/vendor

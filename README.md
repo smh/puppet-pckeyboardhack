@@ -2,12 +2,15 @@
 
 [![Build Status](https://travis-ci.org/smh/puppet-pckeyboardhack.png?branch=master)](https://travis-ci.org/smh/puppet-pckeyboardhack)
 
-Installs [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en) on your Mac.
+Installs [PCKeyboardHack](http://pqrs.org/macosx/pckeyboardhack/pckeyboardhack.html.en) on your Mac.
 
 ## Usage
 
 ```puppet
 include pckeyboardhack
+
+# add pckeyboardhack to login items:
+include pckeyboardhack::login_item
 
 # change the left control to F19:
 pckeyboardhack::bind { 'keyboard bindings':
@@ -18,6 +21,7 @@ pckeyboardhack::bind { 'keyboard bindings':
 ## Required Puppet Modules
 
 * `boxen`
+* `osx`
 * `glarizza/puppet-property_list_key`
 
 ## Development

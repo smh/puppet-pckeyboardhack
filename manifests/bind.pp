@@ -4,10 +4,11 @@
 #
 #  mappings - a hash of mappings to set up. For instance: { 'control_l' => 80 }
 define pckeyboardhack::bind($mappings) {
+  include pckeyboardhack::config
 
   property_list_key { 'pckeyboardhack::bind':
     ensure     => 'present',
-    path       => '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+    path       => $pckeyboardhack::config::plist_path,
     key        => 'sysctl',
     value      => expand_binding($mappings),
     value_type => 'hash'

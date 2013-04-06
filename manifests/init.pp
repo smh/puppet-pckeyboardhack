@@ -4,9 +4,11 @@
 #
 #   include pckeyboardhack
 class pckeyboardhack {
+  include pckeyboardhack::config
+
   package { 'PCKeyboardHack':
     ensure   => installed,
-    source   => 'http://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-9.0.0.dmg',
+    source   => $pckeyboardhack::config::dmg_url,
     provider => 'pkgdmg'
   }
 }
