@@ -14,8 +14,8 @@ define pckeyboardhack::bind($mappings) {
     value_type => 'hash'
   }
 
-  exec { "chown $::boxen_user $pckeyboardhack::config::plist_path":
-    command => "chown $::boxen_user $pckeyboardhack::config::plist_path",
+  exec { "chown ${::boxen_user} ${pckeyboardhack::config::plist_path}":
+    command => "chown ${::boxen_user} ${pckeyboardhack::config::plist_path}",
     require => Property_list_key['pckeyboardhack::bind']
   }
 }
