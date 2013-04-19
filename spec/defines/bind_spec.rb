@@ -29,5 +29,10 @@ describe 'pckeyboardhack::bind' do
       },
       :value_type  => 'hash'
     })
+
+    should contain_exec('chown smh /Users/smh/Library/Preferences/org.pqrs.PCKeyboardHack.plist').with({
+      :command => 'chown smh /Users/smh/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+      :require => 'Property_list_key[pckeyboardhack::bind]'
+    })
   end
 end
