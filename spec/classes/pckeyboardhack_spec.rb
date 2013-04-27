@@ -6,7 +6,7 @@ describe 'pckeyboardhack' do
 
     should contain_package('PCKeyboardHack').with({
       :ensure   => 'installed',
-      :source   => 'http://pqrs.org/macosx/pckeyboardhack/files/PCKeyboardHack-9.0.0.dmg',
+      :source   => 'http://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-9.0.0.dmg',
       :provider => 'pkgdmg'
     })
   end
