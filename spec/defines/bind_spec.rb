@@ -30,7 +30,7 @@ describe 'pckeyboardhack::bind' do
       :value_type  => 'hash'
     })
 
-    should contain_file('owner /Users/smh/Library/Preferences/org.pqrs.PCKeyboardHack.plist').with({
+    should contain_file('/Users/smh/Library/Preferences/org.pqrs.PCKeyboardHack.plist').with({
       :owner => 'smh',
       :require => 'Property_list_key[pckeyboardhack::bind]'
     })
