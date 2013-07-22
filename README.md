@@ -43,7 +43,7 @@ To identify keys not listed below, run `defaults read org.pqrs.PCKeyboardHack.pl
 * Return: `return`
 * Keypad Enter: `enter`
 
-Keys on Non-Apple Keyboards
+### Keys on Non-Apple Keyboards
 
 * International 1 Key: `int1`
 * International 2 Key: `int2`
