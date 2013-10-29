@@ -21,13 +21,13 @@ class pckeyboardhack::login_item($ensure = 'present') {
   osx_login_item { 'PCKeyboardHack':
     ensure  => $ensure,
     path    => $pckeyboardhack::config::app,
-    require => Package['PCKeyboardHack']
+    require => Package['PCKeyboardHack_10.0.0']
   }
 
   exec { 'launch pckeyboardhack':
     command     => "/usr/bin/open ${pckeyboardhack::config::app}",
     refreshonly => true,
-    subscribe   => Package['PCKeyboardHack'],
+    subscribe   => Package['PCKeyboardHack_10.0.0'],
     require     => Osx_login_item['PCKeyboardHack']
   }
 }
