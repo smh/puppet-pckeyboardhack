@@ -6,7 +6,7 @@
 class pckeyboardhack {
   include pckeyboardhack::config
 
-  package { 'PCKeyboardHack':
+  package { "PCKeyboardHack_${pckeyboardhack::config::version}":
     ensure   => installed,
     source   => $pckeyboardhack::config::dmg_url,
     provider => 'pkgdmg'
