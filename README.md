@@ -87,6 +87,14 @@ To identify keys not listed below, run `defaults read org.pqrs.PCKeyboardHack.pl
 * `osx`
 * `glarizza/puppet-property_list_key`
 
+### Note for mavericks users
+
+Add the following dependency on CFPropertyList provider in your Gemfile in our-boxen:
+
+* gem "CFPropertyList", "~> 2.2.5"
+
+See https://github.com/glarizza/puppet-property_list_key#a-note-for-mavericks-support for more information
+
 ## Development
 
 Write code. Run `script/cibuild` to test it. Check the `script`

@@ -8,6 +8,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    CFPropertyList (2.2.5)
     addressable (2.3.4)
     ansi (1.4.3)
     boxen (1.1.2)
@@ -74,5 +75,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  CFPropertyList (~> 2.2.5)
   cardboard (~> 1.0)
   rspec-puppet!
