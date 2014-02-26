@@ -7,7 +7,7 @@ describe 'pckeyboardhack::login_item' do
     should contain_exec('launch pckeyboardhack').with({
       :command     => '/usr/bin/open /Applications/PCKeyboardHack.app',
       :refreshonly => true,
-      :subscribe   => 'Package[PCKeyboardHack_10.4.0]',
+      :subscribe   => 'Package[PCKeyboardHack_10.5.0]',
       :require     => 'Osx_login_item[PCKeyboardHack]'
     })
   end
@@ -17,7 +17,7 @@ describe 'pckeyboardhack::login_item' do
       should contain_osx_login_item('PCKeyboardHack').with({
         :ensure  => 'present',
         :path    => '/Applications/PCKeyboardHack.app',
-        :require => 'Package[PCKeyboardHack_10.4.0]'
+        :require => 'Package[PCKeyboardHack_10.5.0]'
       })
     end
   end
@@ -33,7 +33,7 @@ describe 'pckeyboardhack::login_item' do
       should contain_osx_login_item('PCKeyboardHack').with({
         :ensure  => 'present',
         :path    => '/Applications/PCKeyboardHack.app',
-        :require => 'Package[PCKeyboardHack_10.4.0]'
+        :require => 'Package[PCKeyboardHack_10.5.0]'
       })
     end
   end
@@ -49,7 +49,7 @@ describe 'pckeyboardhack::login_item' do
       should contain_osx_login_item('PCKeyboardHack').with({
         :ensure  => 'absent',
         :path    => '/Applications/PCKeyboardHack.app',
-        :require => 'Package[PCKeyboardHack_10.4.0]'
+        :require => 'Package[PCKeyboardHack_10.5.0]'
       })
     end
   end

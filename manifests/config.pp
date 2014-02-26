@@ -4,7 +4,7 @@
 # $app - location of installed application
 # $plist_path - location of plist
 class pckeyboardhack::config {
-  $version = '10.4.0'
+  $version = '10.5.0'
   $base_url = 'https://pqrs.org/macosx/keyremap4macbook/files'
   $dmg_url = "${base_url}/PCKeyboardHack-${version}.dmg"
   $app = '/Applications/PCKeyboardHack.app'
