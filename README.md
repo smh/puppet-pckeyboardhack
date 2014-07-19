@@ -1,3 +1,5 @@
+** Note **: This module is deprecated - use [boxen/puppet-seil](https://github.com/boxen/puppet-seil) instead.
+
 # PCKeyboardHack Puppet Module for Boxen
 
 [![Build Status](https://travis-ci.org/smh/puppet-pckeyboardhack.png?branch=master)](https://travis-ci.org/smh/puppet-pckeyboardhack)
