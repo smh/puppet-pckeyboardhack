@@ -1,4 +1,4 @@
-** Note **: This module is deprecated - use [boxen/puppet-seil](https://github.com/boxen/puppet-seil) instead.
+**Note**: This module is deprecated - use [boxen/puppet-seil](https://github.com/boxen/puppet-seil) instead.
 
 # PCKeyboardHack Puppet Module for Boxen
 
